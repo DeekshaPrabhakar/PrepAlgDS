@@ -41,12 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arrays\AddOneToNumber.cs" />
+    <Compile Include="Arrays\PascalTriangle.cs" />
+    <Compile Include="Arrays\RotateMatrix.cs" />
+    <Compile Include="Arrays\SpiralOderII.cs" />
+    <Compile Include="CalibrationOne\ArrangingCoins.cs" />
+    <Compile Include="CalibrationOne\Braces.cs" />
+    <Compile Include="CalibrationOne\DegreeArray.cs" />
+    <Compile Include="CalibrationOne\ShortestPalindrome.cs" />
+    <Compile Include="CalibrationOne\Winner.cs" />
     <Compile Include="Checkpoints\LongestConsecutiveSequence.cs" />
     <Compile Include="Checkpoints\NextGreater.cs" />
     <Compile Include="Checkpoints\NumRange.cs" />
     <Compile Include="Checkpoints\PrettyPrint.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sorting\BubbleSort.cs" />
+    <Compile Include="Strings\PalindromeString.cs" />
+    <Compile Include="Strings\ReverseAString.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
