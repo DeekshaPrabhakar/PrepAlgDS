@@ -13,6 +13,8 @@ Simulation Array
 ## Strings
 String Simulation
 - [Palindrome String](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Strings/PalindromeString.cs)
+- [Longest Common Prefix](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Strings/LongestCommonPrefix.cs)
 
 Words
 - [Reverse the String](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Strings/ReverseAString.cs)
+- [Length of Last Word](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Strings/LastWordLength.cs)
