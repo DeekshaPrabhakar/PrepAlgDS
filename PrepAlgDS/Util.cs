@@ -21,6 +21,16 @@ namespace PrepAlgDS
             }
         }
 
+        public static void DisplayListOfStrings(List<string> list)
+        {
+            foreach (var value in list)
+            {
+                Console.Write(value);
+                Console.WriteLine();
+            }
+        }
+
+
         public static void DisplayList(List<int> list)
         {
             foreach (var value in list)

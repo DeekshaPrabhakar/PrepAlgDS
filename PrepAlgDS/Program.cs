@@ -23,8 +23,11 @@ namespace PrepAlgDS
 
         private static void RunStrings()
         {
-            ReverseAString.Run();
-            PalindromeString.Run();
+            JustifyText.Run();
+            //LongestCommonPrefix.Run();
+            //LastWordLength.Run();
+            //ReverseAString.Run();
+            //PalindromeString.Run();
         }
         private static void RunArrays()
         {
