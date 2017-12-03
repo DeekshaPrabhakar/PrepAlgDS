@@ -44,6 +44,7 @@
     <Compile Include="Arrays\AddOneToNumber.cs" />
     <Compile Include="Arrays\PascalTriangle.cs" />
     <Compile Include="Arrays\RotateMatrix.cs" />
+    <Compile Include="Arrays\SetMatrixZeros.cs" />
     <Compile Include="Arrays\SpiralOderII.cs" />
     <Compile Include="CalibrationOne\ArrangingCoins.cs" />
     <Compile Include="CalibrationOne\Braces.cs" />
