@@ -63,6 +63,7 @@
     <Compile Include="Strings\LastWordLength.cs" />
     <Compile Include="Strings\LongestCommonPrefix.cs" />
     <Compile Include="Strings\PalindromeString.cs" />
+    <Compile Include="Strings\PrettyJSON.cs" />
     <Compile Include="Strings\ReverseAString.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>

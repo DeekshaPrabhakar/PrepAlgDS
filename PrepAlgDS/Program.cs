@@ -23,7 +23,8 @@ namespace PrepAlgDS
 
         private static void RunStrings()
         {
-            AddBinaryStrings.Run();
+            PrettyJSON.Run();
+            //AddBinaryStrings.Run();
             //SetMatrixZeros.Run();
             //JustifyText.Run();
             //LongestCommonPrefix.Run();

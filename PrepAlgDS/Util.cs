@@ -40,5 +40,13 @@ namespace PrepAlgDS
             }
             Console.WriteLine();
         }
+
+        public static void DisplayJSON(List<String> list)
+        {
+            foreach (var value in list)
+            {
+                Console.WriteLine(value);
+            }
+        }
     }
 }
