@@ -23,7 +23,8 @@ namespace PrepAlgDS
 
         private static void RunStrings()
         {
-            SetMatrixZeros.Run();
+            AddBinaryStrings.Run();
+            //SetMatrixZeros.Run();
             //JustifyText.Run();
             //LongestCommonPrefix.Run();
             //LastWordLength.Run();
