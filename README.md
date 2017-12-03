@@ -22,6 +22,9 @@ Interview Bit Problems
 - [Reverse the String](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Strings/ReverseAString.cs)
 - [Length of Last Word](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Strings/LastWordLength.cs)
 
+### String Math
+- [Add Binary Strings](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Strings/AddBinaryStrings.cs)
+
 ### Pretty Print
 - [Justified Text](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Strings/JustifyText.cs)(in progress)
 
