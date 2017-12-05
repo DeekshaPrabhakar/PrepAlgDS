@@ -19,9 +19,9 @@ namespace PrepAlgDS.HashTables
             Dictionary<char, int> dict = new Dictionary<char, int>();
             StringBuilder sb = new StringBuilder();
             int i = 0;
-            while(i< A.Length)
-            { 
-                if(!dict.ContainsKey(A[i]))
+            while (i < A.Length)
+            {
+                if (!dict.ContainsKey(A[i]))
                 {
                     dict.Add(A[i], i);
                     sb.Append(A[i].ToString());
@@ -35,7 +35,7 @@ namespace PrepAlgDS.HashTables
                     dict = new Dictionary<char, int>();
                 }
             }
-
+            count = sb.Length > count ? sb.Length : count;
             return count;
         }
     }
