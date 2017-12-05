@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrepAlgDS.LinkedLists;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +47,23 @@ namespace PrepAlgDS
             foreach (var value in list)
             {
                 Console.WriteLine(value);
+            }
+        }
+
+        public static void DisplayLinkedList(ListNode list)
+        {
+            ListNode curr = list;
+            while (curr != null)
+            {
+                if (curr.next != null)
+                {
+                    Console.Write(curr.val + "->");
+                }
+                else
+                {
+                    Console.Write(curr.val);
+                }
+                curr = curr.next;
             }
         }
     }

@@ -55,6 +55,11 @@
     <Compile Include="Checkpoints\NextGreater.cs" />
     <Compile Include="Checkpoints\NumRange.cs" />
     <Compile Include="Checkpoints\PrettyPrint.cs" />
+    <Compile Include="HashTables\Anagram.cs" />
+    <Compile Include="HashTables\LongestSubstring.cs" />
+    <Compile Include="LinkedLists\AddTwoNumbers.cs" />
+    <Compile Include="LinkedLists\ListNode.cs" />
+    <Compile Include="LinkedLists\RemoveDuplicateSorted.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting\BubbleSort.cs" />
@@ -70,6 +75,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
