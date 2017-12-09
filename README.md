@@ -31,14 +31,20 @@ Interview Bit Problems
 ## Linked Lists
 #### List 2 pointer
 - [Remove Duplicates from Sorted List](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/LinkedLists/RemoveDuplicateSorted.cs)
+- [Remove Duplicates from Sorted List II](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/LinkedLists/RemoveDuplicateSortedII.cs)
+- [Merge Two Sorted Lists](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/LinkedLists/MergeSortedLists.cs)
 
 #### List Math
-[Add Two Numbers as Lists](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/LinkedLists/AddTwoNumbers.cs)
+- [Add Two Numbers as Lists](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/LinkedLists/AddTwoNumbers.cs)
+
+#### List cycle
+- [List Cycle](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/LinkedLists/ListCycle.cs)
 
 ## Hash Tables
 #### Key formation
-[Anagrams](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/HashTables/Anagram.cs)
+- [Anagrams](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/HashTables/Anagram.cs)
+- []()
 
 #### Hashing two pointer
-[Longest Substring Without Repeat](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/HashTables/LongestSubstring.cs)
+- [Longest Substring Without Repeat](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/HashTables/LongestSubstring.cs)
 
