@@ -56,7 +56,10 @@
     <Compile Include="Checkpoints\NumRange.cs" />
     <Compile Include="Checkpoints\PrettyPrint.cs" />
     <Compile Include="HashTables\Anagram.cs" />
+    <Compile Include="HashTables\DiffK.cs" />
+    <Compile Include="HashTables\Fraction.cs" />
     <Compile Include="HashTables\LongestSubstring.cs" />
+    <Compile Include="HashTables\TwoSum.cs" />
     <Compile Include="LinkedLists\AddTwoNumbers.cs" />
     <Compile Include="LinkedLists\ListCycle.cs" />
     <Compile Include="LinkedLists\ListNode.cs" />

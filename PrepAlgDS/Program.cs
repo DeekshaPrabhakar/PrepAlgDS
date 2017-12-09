@@ -27,13 +27,15 @@ namespace PrepAlgDS
 
         private static void RunHashtables()
         {
+            TwoSum.Run();
+            //Fraction.Run();
             //LongestSubstring.Run();
             //Anagram.Run();
         }
 
         private static void RunLinkedLists()
         {
-            ListCycle.Run();
+            //ListCycle.Run();
             //MergeSortedLists.Run();
             //RemoveDuplicateSortedII.Run();
             //RemoveDuplicateSorted.Run();
