@@ -41,10 +41,15 @@ Interview Bit Problems
 - [List Cycle](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/LinkedLists/ListCycle.cs)
 
 ## Hash Tables
+
+#### Hash search
+- [2 Sum](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/HashTables/TwoSum.cs)
+
 #### Key formation
 - [Anagrams](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/HashTables/Anagram.cs)
-- []()
 
 #### Hashing two pointer
 - [Longest Substring Without Repeat](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/HashTables/LongestSubstring.cs)
 
+#### Maths and hashing
+- [Fraction](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/HashTables/Fraction.cs)
