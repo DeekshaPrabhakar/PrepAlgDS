@@ -76,6 +76,14 @@
     <Compile Include="Strings\PalindromeString.cs" />
     <Compile Include="Strings\PrettyJSON.cs" />
     <Compile Include="Strings\ReverseAString.cs" />
+    <Compile Include="Trees\CountLeafNodes.cs" />
+    <Compile Include="Trees\IdenticalBinaryTrees.cs" />
+    <Compile Include="Trees\InorderTraversal.cs" />
+    <Compile Include="Trees\PostTraversal.cs" />
+    <Compile Include="Trees\PreOrderTraversal.cs" />
+    <Compile Include="Trees\SymmetricBinaryTree.cs" />
+    <Compile Include="Trees\TreeNode.cs" />
+    <Compile Include="Trees\ValidBST.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
