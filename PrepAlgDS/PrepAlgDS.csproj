@@ -46,6 +46,8 @@
     <Compile Include="Arrays\RotateMatrix.cs" />
     <Compile Include="Arrays\SetMatrixZeros.cs" />
     <Compile Include="Arrays\SpiralOderII.cs" />
+    <Compile Include="BinarySearch\CountOccurences.cs" />
+    <Compile Include="BinarySearch\SquareRoot.cs" />
     <Compile Include="CalibrationOne\ArrangingCoins.cs" />
     <Compile Include="CalibrationOne\Braces.cs" />
     <Compile Include="CalibrationOne\DegreeArray.cs" />

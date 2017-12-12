@@ -1,4 +1,5 @@
 ﻿using PrepAlgDS.Arrays;
+using PrepAlgDS.BinarySearch;
 using PrepAlgDS.CalibrationOne;
 using PrepAlgDS.Checkpoints;
 using PrepAlgDS.HashTables;
@@ -16,7 +17,8 @@ namespace PrepAlgDS
     {
         static void Main(string[] args)
         {
-            RunTrees();
+            RunBSTrees();
+            //RunTrees();
             //RunCalibrationTwo();
             //RunLinkedLists();
             //RunHashtables();
@@ -28,9 +30,15 @@ namespace PrepAlgDS
             Console.ReadLine();
         }
 
+        private static void RunBSTrees()
+        {
+            CountOccurences.Run();
+            //SquareRoot.Run();
+        }
+
         private static void RunTrees()
         {
-            ValidBST.Run();
+            //ValidBST.Run();
             //SymmetricBinaryTree.Run();
             //InorderTraversal.Run();
         }
