@@ -11,10 +11,12 @@ namespace PrepAlgDS.Trees
         public int val;
         public TreeNode left;
         public TreeNode right;
+        public bool isVisited = false;
         public TreeNode(int x) 
         { 
             this.val = x; 
-            this.left = this.right = null; 
+            this.left = this.right = null;
+            this.isVisited = false;
         }
 
         public void insert(int value)

@@ -18,7 +18,7 @@ namespace PrepAlgDS
         static void Main(string[] args)
         {
             RunBSTrees();
-            //RunTrees();
+            RunTrees();
             //RunCalibrationTwo();
             //RunLinkedLists();
             //RunHashtables();
@@ -32,13 +32,16 @@ namespace PrepAlgDS
 
         private static void RunBSTrees()
         {
-            CountOccurences.Run();
+            ValidBST.Run();
+            //CountOccurences.Run();
             //SquareRoot.Run();
         }
 
         private static void RunTrees()
         {
-            //ValidBST.Run();
+            //IdenticalBinaryTrees.Run();
+            //CountLeafNodes.Run();
+            //BFSTraversal.Run();
             //SymmetricBinaryTree.Run();
             //InorderTraversal.Run();
         }

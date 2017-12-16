@@ -48,6 +48,7 @@
     <Compile Include="Arrays\SpiralOderII.cs" />
     <Compile Include="BinarySearch\CountOccurences.cs" />
     <Compile Include="BinarySearch\SquareRoot.cs" />
+    <Compile Include="BinarySearch\ValidBST.cs" />
     <Compile Include="CalibrationOne\ArrangingCoins.cs" />
     <Compile Include="CalibrationOne\Braces.cs" />
     <Compile Include="CalibrationOne\DegreeArray.cs" />
@@ -78,14 +79,15 @@
     <Compile Include="Strings\PalindromeString.cs" />
     <Compile Include="Strings\PrettyJSON.cs" />
     <Compile Include="Strings\ReverseAString.cs" />
+    <Compile Include="Trees\BFSTraversal.cs" />
     <Compile Include="Trees\CountLeafNodes.cs" />
+    <Compile Include="Trees\DFSTraversal.cs" />
     <Compile Include="Trees\IdenticalBinaryTrees.cs" />
     <Compile Include="Trees\InorderTraversal.cs" />
     <Compile Include="Trees\PostTraversal.cs" />
     <Compile Include="Trees\PreOrderTraversal.cs" />
     <Compile Include="Trees\SymmetricBinaryTree.cs" />
     <Compile Include="Trees\TreeNode.cs" />
-    <Compile Include="Trees\ValidBST.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
