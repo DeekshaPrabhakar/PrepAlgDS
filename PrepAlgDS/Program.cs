@@ -32,7 +32,8 @@ namespace PrepAlgDS
 
         private static void RunBSTrees()
         {
-            ValidBST.Run();
+            RotatedArray.Run();
+            //ValidBST.Run();
             //CountOccurences.Run();
             //SquareRoot.Run();
         }

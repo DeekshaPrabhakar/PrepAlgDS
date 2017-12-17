@@ -47,6 +47,8 @@
     <Compile Include="Arrays\SetMatrixZeros.cs" />
     <Compile Include="Arrays\SpiralOderII.cs" />
     <Compile Include="BinarySearch\CountOccurences.cs" />
+    <Compile Include="BinarySearch\RangeSearch.cs" />
+    <Compile Include="BinarySearch\RotatedArray.cs" />
     <Compile Include="BinarySearch\SquareRoot.cs" />
     <Compile Include="BinarySearch\ValidBST.cs" />
     <Compile Include="CalibrationOne\ArrangingCoins.cs" />
@@ -63,6 +65,9 @@
     <Compile Include="HashTables\Fraction.cs" />
     <Compile Include="HashTables\LongestSubstring.cs" />
     <Compile Include="HashTables\TwoSum.cs" />
+    <Compile Include="Heaps\Heap.cs" />
+    <Compile Include="Heaps\MergeSortedLists.cs" />
+    <Compile Include="Heaps\PriorityQueue.cs" />
     <Compile Include="LinkedLists\AddTwoNumbers.cs" />
     <Compile Include="LinkedLists\ListCycle.cs" />
     <Compile Include="LinkedLists\ListNode.cs" />
