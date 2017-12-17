@@ -107,7 +107,7 @@ namespace PrepAlgDS
 
         private static void RunHeaps()
         {
-           // PrepAlgDS.Heaps.MergeSortedLists.Run();
+           PrepAlgDS.Heaps.MergeSortedLists.Run();
         }
 
         static int[] counts(int[] nums, int[] maxes)
@@ -273,7 +273,8 @@ namespace PrepAlgDS
 
         private static void RunBSTrees()
         {
-            MatrixSearch.Run();
+            //PreOrderTraversal.Run();
+            //MatrixSearch.Run();
             //RotatedArray.Run();
             //ValidBST.Run();
             //CountOccurences.Run();

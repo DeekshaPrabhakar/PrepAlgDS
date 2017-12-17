@@ -29,7 +29,7 @@ namespace PrepAlgDS.Heaps
 
         private static ListNode mergeSortedLists(ListNode A, ListNode B, ListNode C)
         {
-            MinHeapImplementation heap = new MinHeapImplementation();
+            Heap<int> heap = new Heap<int>();
             ListNode num1 = A;
             ListNode num2 = B;
             ListNode num3 = C;
@@ -38,30 +38,29 @@ namespace PrepAlgDS.Heaps
             {
                 if(num1 != null)
                 {
-                    heap.enqueue(num1.val);
+                    heap.Add(num1.val);
                     num1 = num1.next;
                 }
 
                 if (num2 != null)
                 {
-                    heap.enqueue(num2.val);
+                    heap.Add(num2.val);
                     num2 = num2.next;
                 }
 
                 if (num3 != null)
                 {
-                    heap.enqueue(num3.val);
+                    heap.Add(num3.val);
                     num3 = num3.next;
                 }
             }
 
             ListNode dummy = new ListNode(0);
             ListNode curr = dummy;
-            while(heap.getCount() >0)
+            while (heap.GetSize() > 0)
             {
-                int min = heap.getMinimum();
+                int min = heap.PopMin();
                 curr.next = new ListNode(min);
-                heap.deleteElement(min);
                 curr = curr.next;
             }
 
