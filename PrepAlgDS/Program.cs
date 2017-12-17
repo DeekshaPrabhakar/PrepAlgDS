@@ -3,6 +3,7 @@ using PrepAlgDS.BinarySearch;
 using PrepAlgDS.CalibrationOne;
 using PrepAlgDS.Checkpoints;
 using PrepAlgDS.HashTables;
+using PrepAlgDS.Heaps;
 using PrepAlgDS.LinkedLists;
 using PrepAlgDS.Strings;
 using PrepAlgDS.Trees;
@@ -17,8 +18,9 @@ namespace PrepAlgDS
     {
         static void Main(string[] args)
         {
+            //RunCalibrationThree();
             RunBSTrees();
-            RunTrees();
+            //RunTrees();
             //RunCalibrationTwo();
             //RunLinkedLists();
             //RunHashtables();
@@ -27,12 +29,252 @@ namespace PrepAlgDS
             //RunStrings();
             //RunCalibrationOne();
             //RunCheckpoints();
+            RunHeaps();
             Console.ReadLine();
         }
 
+        private static void RunCalibrationThree()
+        {
+            //int keys_size = 0;
+            //keys_size = Convert.ToInt32(Console.ReadLine());
+            //int[] keys = new int[keys_size];
+            //int keys_item;
+            //for (int keys_i = 0; keys_i < keys_size; keys_i++)
+            //{
+            //    keys_item = Convert.ToInt32(Console.ReadLine());
+            //    keys[keys_i] = keys_item;
+            //}
+            //createBST(keys);
+
+
+            //int noOfQueries = 0;
+            //noOfQueries = Convert.ToInt32(Console.ReadLine());
+            //List<List<int>> input = new List<List<int>>();
+
+            //int noOfNodes = 0;
+            //List<int> nodes = null;
+
+            //for (int keys_i = 0; keys_i < noOfQueries; keys_i++)
+            //{
+            //    noOfNodes = Convert.ToInt32(Console.ReadLine());
+            //    nodes = new List<int>();
+            //    string numbers = Console.ReadLine();
+            //    string[] numArray = numbers.Split(' ');
+            //    foreach (string num in numArray)
+            //    {
+            //        nodes.Add(Convert.ToInt32(num));
+            //    }
+
+            //    input.Add(nodes);
+            //}
+
+            //bool output = false;
+
+            //foreach (List<int> l in input)
+            //{
+            //    output = isSequencePreOrder(l);
+            //    Console.WriteLine(output == true ? "YES" : "NO");
+            //}
+
+            //int[] res;
+            //int nums_size = 0;
+            //nums_size = Convert.ToInt32(Console.ReadLine());
+            //int[] nums = new int[nums_size];
+            //int nums_item;
+            //for (int nums_i = 0; nums_i < nums_size; nums_i++)
+            //{
+            //    nums_item = Convert.ToInt32(Console.ReadLine());
+            //    nums[nums_i] = nums_item;
+            //}
+
+            //int maxes_size = 0;
+            //maxes_size = Convert.ToInt32(Console.ReadLine());
+            //int[] maxes = new int[maxes_size];
+            //int maxes_item;
+            //for (int maxes_i = 0; maxes_i < maxes_size; maxes_i++)
+            //{
+            //    maxes_item = Convert.ToInt32(Console.ReadLine());
+            //    maxes[maxes_i] = maxes_item;
+            //}
+
+            //res = counts(nums, maxes);
+            //for (int res_i = 0; res_i < res.Length; res_i++)
+            //{
+            //    Console.WriteLine(res[res_i]);
+            //}
+            
+        }
+
+        private static void RunHeaps()
+        {
+           // PrepAlgDS.Heaps.MergeSortedLists.Run();
+        }
+
+        static int[] counts(int[] nums, int[] maxes)
+        {
+            //List<int> output = new List<int>(maxes.Length);
+            int[] output = new int[maxes.Length];
+
+            MinHeapImplementation heap = new MinHeapImplementation();
+
+            foreach(int num in nums)
+            {
+                heap.enqueue(num);
+            }
+
+            while (heap.getCount() > 0)
+            {
+                Int64 min = heap.getMinimum();
+
+                for (int i = 0; i < maxes.Length; i++)
+                {
+                    if (min <= maxes[i])
+                    {
+                        output[i] += 1;
+                    }
+
+                }
+            }
+            
+
+            return output;
+        }
+
+
+        private static bool isSequencePreOrder(List<int> nodesList)
+        {
+            bool isPreOrder = false;
+            TreeNode A = createBSTFomPreOrder(nodesList);
+            if(isValidBST(A))
+            {
+                isPreOrder = true;
+            }
+            return isPreOrder;
+        }
+
+        protected static TreeNode createBSTFomPreOrder(List<int> arr)
+        {
+            TreeNode root = new TreeNode(arr[0]);//root first
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            stack.Push(root);
+
+            for (int i = 1; i < arr.Count; i++)
+            {
+                TreeNode currentNode = null;
+
+                while (stack.Count != 0 && arr[i] > stack.Peek().val)
+                {
+                    currentNode = stack.Pop();
+                }
+
+                if (currentNode != null)
+                {//right subtree
+                    currentNode.right = new TreeNode(arr[i]);
+                    stack.Push(currentNode.right);
+                }
+                else
+                {//left subtree
+                    currentNode = stack.Peek();
+                    currentNode.left = new TreeNode(arr[i]);
+                    stack.Push(currentNode.left);
+                }
+            }
+            return root;
+
+        }
+
+
+        public static bool isValidBST(TreeNode A)
+        {
+            return validBST(A, int.MinValue, int.MaxValue);
+        }
+
+        public static bool validBST(TreeNode root, int min, int max)
+        {
+            if(root == null)
+            {
+                return true;
+            }
+
+            if(root.val < min || root.val > max)
+            {
+                return false;
+            }
+
+            return validBST(root.left, min, root.val - 1) && validBST(root.right, root.val + 1, max);
+
+        }
+
+        public class TreeNode
+        {
+            public int val;
+            public TreeNode left;
+            public TreeNode right;
+                       
+            public TreeNode(int x)
+            {
+                this.val = x;
+                this.left = this.right = null;
+            }
+
+        }
+
+        private static int counter = 0;
+            public static void createBST(int[] keys)
+            {
+                counter = 0;
+                TreeNode root = null;
+                foreach (int key in keys)
+                {
+                    if(root != null)
+                    {
+                        insert(root, key);
+                    }
+                    else
+                    {
+                        root = new TreeNode(key);
+                    }
+                    Console.WriteLine(counter);
+                }
+            }
+
+            private static void insert(TreeNode root, int key)
+            {
+                counter += 1;
+                if(key < root.val)
+                {
+                    if(root.left == null)
+                    {
+                        root.left = new TreeNode(key);
+                        //return root.left;
+                    }
+                    else
+                    {
+                        insert(root.left, key);
+                        //return insert(root.left, key);
+                    }
+                }
+                else
+                {
+                    if (root.right == null)
+                    {
+                        root.right = new TreeNode(key);
+                        //return root.right;
+                    }
+                    else
+                    {
+                        insert(root.right, key);
+                        //return insert(root.right, key);
+                    }
+                }
+            }
+        
+       
+
         private static void RunBSTrees()
         {
-            RotatedArray.Run();
+            MatrixSearch.Run();
+            //RotatedArray.Run();
             //ValidBST.Run();
             //CountOccurences.Run();
             //SquareRoot.Run();
