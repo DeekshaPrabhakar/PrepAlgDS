@@ -43,7 +43,8 @@ Interview Bit Problems
  - [Square Root Of Integer](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/SquareRoot.cs)
  - [MatrixSearch](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/MatrixSearch.cs)
  - [RotatedArray](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/RotatedArray.cs)
- - [Range Search](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/RangeSearch.cs)
+ - [SortedInsetPosition](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/SortedInsetPosition.cs)
+ -[Rotated Sorted Array Search](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/RotatedSortedArraySearch.cs)
  
  ## Heaps
  - [Merge Sorted Lists](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Heaps/MergeSortedLists.cs)
