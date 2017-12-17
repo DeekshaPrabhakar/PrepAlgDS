@@ -39,5 +39,5 @@ Interview Bit Problems
  #### Binary Search
  - [Count Element Occurence](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/CountOccurences.cs)
  - [Square Root Of Integer](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/SquareRoot.cs)
- - []()
- - []()
+ - [RangeSearch](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/RangeSearch.cs)
+ - [RotatedArray](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/RotatedArray.cs)
