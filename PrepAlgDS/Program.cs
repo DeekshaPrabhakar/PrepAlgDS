@@ -107,38 +107,38 @@ namespace PrepAlgDS
 
         private static void RunHeaps()
         {
-           PrepAlgDS.Heaps.MergeSortedLists.Run();
+           //PrepAlgDS.Heaps.MergeSortedLists.Run();
         }
 
-        static int[] counts(int[] nums, int[] maxes)
-        {
-            //List<int> output = new List<int>(maxes.Length);
-            int[] output = new int[maxes.Length];
+        //static int[] counts(int[] nums, int[] maxes)
+        //{
+        //    //List<int> output = new List<int>(maxes.Length);
+        //    int[] output = new int[maxes.Length];
 
-            MinHeapImplementation heap = new MinHeapImplementation();
+        //    MinHeapImplementation heap = new MinHeapImplementation();
 
-            foreach(int num in nums)
-            {
-                heap.enqueue(num);
-            }
+        //    foreach(int num in nums)
+        //    {
+        //        heap.enqueue(num);
+        //    }
 
-            while (heap.getCount() > 0)
-            {
-                Int64 min = heap.getMinimum();
+        //    while (heap.getCount() > 0)
+        //    {
+        //        Int64 min = heap.getMinimum();
 
-                for (int i = 0; i < maxes.Length; i++)
-                {
-                    if (min <= maxes[i])
-                    {
-                        output[i] += 1;
-                    }
+        //        for (int i = 0; i < maxes.Length; i++)
+        //        {
+        //            if (min <= maxes[i])
+        //            {
+        //                output[i] += 1;
+        //            }
 
-                }
-            }
+        //        }
+        //    }
             
 
-            return output;
-        }
+        //    return output;
+        //}
 
 
         private static bool isSequencePreOrder(List<int> nodesList)
@@ -273,6 +273,8 @@ namespace PrepAlgDS
 
         private static void RunBSTrees()
         {
+            RotatedSortedArraySearch.Run();
+            //SortedInsetPosition.Run();
             //PreOrderTraversal.Run();
             //MatrixSearch.Run();
             //RotatedArray.Run();
