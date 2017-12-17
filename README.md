@@ -31,13 +31,19 @@ Interview Bit Problems
 
 ## Trees
 - [Inorder Traversal](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Trees/InorderTraversal.cs)
+- [Preorder Traversal](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Trees/PreOrderTraversal.cs)
 - [Symmetric Binary Tree](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Trees/SymmetricBinaryTree.cs)
 - [Identical Binary Trees](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Trees/IdenticalBinaryTrees.cs)
 - [Valid Binary Search Tree](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/ValidBST.cs) 
 - [Count Leaf Nodes](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Trees/CountLeafNodes.cs)
+- [BFS Traversal](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Trees/BFSTraversal.cs)
  
  #### Binary Search
  - [Count Element Occurence](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/CountOccurences.cs)
  - [Square Root Of Integer](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/SquareRoot.cs)
  - [MatrixSearch](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/MatrixSearch.cs)
  - [RotatedArray](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/RotatedArray.cs)
+ - [Range Search](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/BinarySearch/RangeSearch.cs)
+ 
+ #### Heaps
+ -[Merge Sorted Lists](https://github.com/DeekshaPrabhakar/PrepAlgDS/blob/master/PrepAlgDS/Heaps/MergeSortedLists.cs)
