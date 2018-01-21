@@ -74,10 +74,16 @@
     <Compile Include="LinkedLists\ListCycle.cs" />
     <Compile Include="LinkedLists\ListNode.cs" />
     <Compile Include="LinkedLists\MergeSortedLists.cs" />
+    <Compile Include="LinkedLists\PrintLinkedListReverseRecursive.cs" />
     <Compile Include="LinkedLists\RemoveDuplicateSorted.cs" />
     <Compile Include="LinkedLists\RemoveDuplicateSortedII.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursion\LetterPhone.cs" />
+    <Compile Include="Recursion\nQueens.cs" />
+    <Compile Include="Recursion\PermuteString.cs" />
+    <Compile Include="Recursion\RecursiveStaircase.cs" />
+    <Compile Include="Recursion\Sublist.cs" />
     <Compile Include="Sorting\BubbleSort.cs" />
     <Compile Include="Strings\AddBinaryStrings.cs" />
     <Compile Include="Strings\JustifyText.cs" />
@@ -89,11 +95,13 @@
     <Compile Include="Trees\BFSTraversal.cs" />
     <Compile Include="Trees\CountLeafNodes.cs" />
     <Compile Include="Trees\DFSTraversal.cs" />
+    <Compile Include="Trees\HeightOfTheTree.cs" />
     <Compile Include="Trees\IdenticalBinaryTrees.cs" />
     <Compile Include="Trees\InorderTraversal.cs" />
     <Compile Include="Trees\PostTraversal.cs" />
     <Compile Include="Trees\PreOrderTraversal.cs" />
     <Compile Include="Trees\SymmetricBinaryTree.cs" />
+    <Compile Include="Trees\Tree.cs" />
     <Compile Include="Trees\TreeNode.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>

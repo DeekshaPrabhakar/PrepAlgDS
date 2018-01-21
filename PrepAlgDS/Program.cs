@@ -5,6 +5,7 @@ using PrepAlgDS.Checkpoints;
 using PrepAlgDS.HashTables;
 using PrepAlgDS.Heaps;
 using PrepAlgDS.LinkedLists;
+using PrepAlgDS.Recursion;
 using PrepAlgDS.Strings;
 using PrepAlgDS.Trees;
 using System;
@@ -19,7 +20,7 @@ namespace PrepAlgDS
         static void Main(string[] args)
         {
             //RunCalibrationThree();
-            RunBSTrees();
+            //RunBSTrees();
             //RunTrees();
             //RunCalibrationTwo();
             //RunLinkedLists();
@@ -29,8 +30,18 @@ namespace PrepAlgDS
             //RunStrings();
             //RunCalibrationOne();
             //RunCheckpoints();
-            RunHeaps();
+            //RunHeaps();
+            RunRecursion();
             Console.ReadLine();
+        }
+
+        private static void RunRecursion()
+        {
+            //RecursiveStaircase.Run();
+            //PermuteString.Run();
+            //LetterPhone.Run();
+            //nQueens.Run();
+            Sublist.Run();
         }
 
         private static void RunCalibrationThree()
@@ -220,60 +231,59 @@ namespace PrepAlgDS
         }
 
         private static int counter = 0;
-            public static void createBST(int[] keys)
+        public static void createBST(int[] keys)
+        {
+            counter = 0;
+            TreeNode root = null;
+            foreach (int key in keys)
             {
-                counter = 0;
-                TreeNode root = null;
-                foreach (int key in keys)
+                if(root != null)
                 {
-                    if(root != null)
-                    {
-                        insert(root, key);
-                    }
-                    else
-                    {
-                        root = new TreeNode(key);
-                    }
-                    Console.WriteLine(counter);
-                }
-            }
-
-            private static void insert(TreeNode root, int key)
-            {
-                counter += 1;
-                if(key < root.val)
-                {
-                    if(root.left == null)
-                    {
-                        root.left = new TreeNode(key);
-                        //return root.left;
-                    }
-                    else
-                    {
-                        insert(root.left, key);
-                        //return insert(root.left, key);
-                    }
+                    insert(root, key);
                 }
                 else
                 {
-                    if (root.right == null)
-                    {
-                        root.right = new TreeNode(key);
-                        //return root.right;
-                    }
-                    else
-                    {
-                        insert(root.right, key);
-                        //return insert(root.right, key);
-                    }
+                    root = new TreeNode(key);
+                }
+                Console.WriteLine(counter);
+            }
+        }
+
+        private static void insert(TreeNode root, int key)
+        {
+            counter += 1;
+            if(key < root.val)
+            {
+                if(root.left == null)
+                {
+                    root.left = new TreeNode(key);
+                    //return root.left;
+                }
+                else
+                {
+                    insert(root.left, key);
+                    //return insert(root.left, key);
                 }
             }
-        
+            else
+            {
+                if (root.right == null)
+                {
+                    root.right = new TreeNode(key);
+                    //return root.right;
+                }
+                else
+                {
+                    insert(root.right, key);
+                    //return insert(root.right, key);
+                }
+            }
+        }       
        
 
         private static void RunBSTrees()
         {
-            RotatedSortedArraySearch.Run();
+            //RotatedSortedArraySearch.Run();
             //SortedInsetPosition.Run();
             //PreOrderTraversal.Run();
             //MatrixSearch.Run();
@@ -281,6 +291,7 @@ namespace PrepAlgDS
             //ValidBST.Run();
             //CountOccurences.Run();
             //SquareRoot.Run();
+            HeightOfTheTree.Run();
         }
 
         private static void RunTrees()
@@ -485,6 +496,7 @@ namespace PrepAlgDS
             //RemoveDuplicateSortedII.Run();
             //RemoveDuplicateSorted.Run();
             //AddTwoNumbers.Run();
+            //PrintLinkedListReverseRecursive.Run();
         }
 
         private static void RunFirstPrep()
