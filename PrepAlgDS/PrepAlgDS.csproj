@@ -52,6 +52,7 @@
     <Compile Include="BinarySearch\RotatedArray.cs" />
     <Compile Include="BinarySearch\RotatedSortedArraySearch.cs" />
     <Compile Include="BinarySearch\SortedInsetPosition.cs" />
+    <Compile Include="BinarySearch\SortedListToBST.cs" />
     <Compile Include="BinarySearch\SquareRoot.cs" />
     <Compile Include="BinarySearch\ValidBST.cs" />
     <Compile Include="CalibrationOne\ArrangingCoins.cs" />
@@ -63,6 +64,8 @@
     <Compile Include="Checkpoints\NextGreater.cs" />
     <Compile Include="Checkpoints\NumRange.cs" />
     <Compile Include="Checkpoints\PrettyPrint.cs" />
+    <Compile Include="Graphs\Edge.cs" />
+    <Compile Include="Graphs\Vertex.cs" />
     <Compile Include="HashTables\Anagram.cs" />
     <Compile Include="HashTables\DiffK.cs" />
     <Compile Include="HashTables\Fraction.cs" />
@@ -98,6 +101,7 @@
     <Compile Include="Trees\HeightOfTheTree.cs" />
     <Compile Include="Trees\IdenticalBinaryTrees.cs" />
     <Compile Include="Trees\InorderTraversal.cs" />
+    <Compile Include="Trees\LevelOrderTraversal.cs" />
     <Compile Include="Trees\PostTraversal.cs" />
     <Compile Include="Trees\PreOrderTraversal.cs" />
     <Compile Include="Trees\SymmetricBinaryTree.cs" />
