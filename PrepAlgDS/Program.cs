@@ -2,6 +2,8 @@
 using PrepAlgDS.BinarySearch;
 using PrepAlgDS.CalibrationOne;
 using PrepAlgDS.Checkpoints;
+using PrepAlgDS.DynamicProgramming;
+using PrepAlgDS.Graphs;
 using PrepAlgDS.HashTables;
 using PrepAlgDS.Heaps;
 using PrepAlgDS.LinkedLists;
@@ -11,6 +13,7 @@ using PrepAlgDS.Trees;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace PrepAlgDS
@@ -21,7 +24,7 @@ namespace PrepAlgDS
         {
             //RunCalibrationThree();
             //RunBSTrees();
-            RunTrees();
+            //RunTrees();
             //RunCalibrationTwo();
             //RunLinkedLists();
             //RunHashtables();
@@ -32,7 +35,371 @@ namespace PrepAlgDS
             //RunCheckpoints();
             //RunHeaps();
             //RunRecursion();
+            //RunCalibrationFour();
+            //RunGraphs();
+            //RunDynamicProgramming();
+            // Console.WriteLine(degreeOfArray(new int[] { 1, 0, 1 }));
+            RunCalibrationFive();
             Console.ReadLine();
+        }
+
+
+        static void RunCalibrationFive()
+        {
+            //Console.WriteLine(canReach(1,4,5,9));
+            //Console.WriteLine(canReach(1, 2, 2, 1));
+            int[] res;
+            int n;
+            n = Convert.ToInt32(Console.ReadLine());
+
+            int queryType_size = 0;
+            queryType_size = Convert.ToInt32(Console.ReadLine());
+            string[] queryType = new string[queryType_size];
+            string queryType_item;
+            for (int queryType_i = 0; queryType_i < queryType_size; queryType_i++)
+            {
+                queryType_item = Console.ReadLine();
+                queryType[queryType_i] = queryType_item;
+            }
+
+            int students1_size = 0;
+            students1_size = Convert.ToInt32(Console.ReadLine());
+            int[] students1 = new int[students1_size];
+            int students1_item;
+            for (int students1_i = 0; students1_i < students1_size; students1_i++)
+            {
+                students1_item = Convert.ToInt32(Console.ReadLine());
+                students1[students1_i] = students1_item;
+            }
+
+            int students2_size = 0;
+            students2_size = Convert.ToInt32(Console.ReadLine());
+            int[] students2 = new int[students2_size];
+            int students2_item;
+            for (int students2_i = 0; students2_i < students2_size; students2_i++)
+            {
+                students2_item = Convert.ToInt32(Console.ReadLine());
+                students2[students2_i] = students2_item;
+            }
+
+            res = getTheGroups(n, queryType, students1, students2);
+            for (int res_i = 0; res_i < res.Length; res_i++)
+            {
+                Console.WriteLine(res[res_i]);
+            }
+        }
+
+        public class Student
+        {
+            public int id;
+            public List<int> friends;//ID's
+            public Student(int id)
+            {
+                this.id = id;
+                this.friends = new List<int>();
+            }
+        }
+        static int[] getTheGroups(int n, string[] queryType, int[] students1, int[] students2)
+        {
+            List<int> arr = new List<int>();
+            Dictionary<int, List<int>> studentIDFriends = new Dictionary<int, List<int>>();
+            Student std = null;
+            for (int i = 1; i <= n; i++)
+            {
+                std = new Student(i);
+                std.friends.Add(i);
+                studentIDFriends.Add(i, new List<int>(new int[] { i }));
+            }
+
+            int grouptoadd = 0;
+            for (int i = 0; i < queryType.Length; i++)
+            {
+                if (queryType[i] == "Friend")
+                {
+                    //for(int i=0; i<students1.Length; i++)
+                    //{
+                    //    if(studentIDFriends.ContainsKey(students1[i]) && grouptoadd == 0)
+                    //    {
+                    //        grouptoadd = students1[i];
+                    //    }
+                    //    else
+                    //    {
+                    //        studentIDFriends[grouptoadd].Add(students1[i]);
+                    //        studentIDFriends.Remove()
+                    //    }
+                    //}
+                }
+                else if(queryType[i] == "Total")
+                {
+                    int count = 0;
+                    //foreach (int studentID in students1)
+                    //{
+                    //    count += studentIDFriendsCount[studentID];
+                    //}
+
+                    //foreach (int studentID in students2)
+                    //{
+                    //    count += studentIDFriendsCount[studentID];
+                    //}
+                    //arr.Add(count);
+                }
+            }
+            
+            return arr.ToArray();
+        }
+
+        class Point
+        {
+            public int x;
+            public int y;
+
+            public Point(int x, int y)
+            {
+                this.x = x;
+                this.y = y;
+            }
+        }
+        static string canReach(int x1, int y1, int x2, int y2)
+        {
+             Queue<Point> toExplore = new Queue<Point>();
+            toExplore.Enqueue(new Point(x1, y1));
+
+            while (toExplore.Count > 0)
+            {
+                Point p = toExplore.Dequeue();
+
+                if (p.x == x2 && p.y == y2)
+                {
+                    return "Yes";
+                }
+
+                if (p.x > x2 || p.y > y2)
+                {
+                    return "No";
+                }
+
+                if (x1 < x2)
+                {
+                    x1 = x1 + y1;
+                }
+                else if (y1 < y2)
+                {
+                    y1 = x1 + y1;
+                }
+                toExplore.Enqueue(new Point(x1, y1));
+            }
+            return "No";
+        }
+        static void RunDynamicProgramming()
+        {
+            //Stairs.Run();
+            //Decode.Run();
+            //JumpGame.Run();
+            LongestParenthesesValid.Run();
+        }
+        static void RunGraphs()
+        {
+            //SteppingNumbers.Run();
+            //CloneGraph.Run();
+            //WordLadder.Run();
+            FinishPreReq.Run();
+            PrimeSmallestSequence.Run();
+        }
+        static int degreeOfArray(int[] arr)
+        {
+            int minimumSubArrayCount = int.MaxValue;
+            if (arr.Length == 0)
+            {
+                return 0;
+            }
+
+            int degree = 0;
+            Dictionary<int, int> elementCountDict = new Dictionary<int, int>();
+            Dictionary<int, int> elementStartIndexDict = new Dictionary<int, int>();
+            Dictionary<int, int> elementEndIndexDict = new Dictionary<int, int>();
+
+            for (int index = 0; index < arr.Length; index++)
+            {
+                int el = arr[index];
+                if (elementCountDict.ContainsKey(el))
+                {
+                    elementCountDict[el] = elementCountDict[el] + 1;
+                    elementEndIndexDict[el] = index;
+                }
+                else
+                {
+                    elementCountDict.Add(el, 1);
+                    elementStartIndexDict.Add(el, index);
+                    elementEndIndexDict.Add(el, index);
+                }
+                degree = elementCountDict[el] > degree ? elementCountDict[el] : degree;
+            }
+
+            foreach(KeyValuePair<int,int> kv in elementCountDict)
+            {
+                if(kv.Value == degree)
+                {
+                    int subArrayCount = (elementEndIndexDict[kv.Key] - elementStartIndexDict[kv.Key]) + 1;
+                    minimumSubArrayCount = subArrayCount < minimumSubArrayCount ? subArrayCount : minimumSubArrayCount;
+                }
+            }
+
+            return minimumSubArrayCount;
+        }
+
+
+        private static void RunCalibrationFour()
+        {
+            //Console.WriteLine(isPossible(1, 4, 5, 9));
+            //Console.WriteLine(isPossible(1, 2, 3, 6));
+            //possible(1, 4, 5, 9);
+            counterGame("6");
+        }
+
+
+        static void counterGame(string test)
+        {
+            
+                ulong N = 0;
+
+                if (ulong.TryParse(test, out N) == false)
+                {
+                    N = 0;
+                }
+                if (N > 0)
+                {
+                    bool isLouiseplaying = true;
+                    ulong counter = N;
+
+                    while (counter != 1)
+                    {
+                        if (isPowerofTwo(counter))
+                        {
+                            counter = counter / 2;
+                        }
+                        else
+                        {
+                            counter = counter - largestPowerLessThan(counter);
+                        }
+                        isLouiseplaying = !isLouiseplaying;
+                    }
+
+                    if (isLouiseplaying)
+                    {
+                        Console.WriteLine("Richard");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Louise");
+                    }
+                }
+            
+        }
+
+        static ulong largestPowerLessThan(ulong N)
+        {
+            ulong n = IntergerSquareroot(N);
+            return (n * n);
+        }
+
+        private static ulong IntergerSquareroot(ulong A)
+        {
+            ulong left = 0, right = A;//for 25
+            //save interval for 25 in left and right initially 0 - 25; take mid 12 if 12*12 = 144
+            while (left <= right)
+            {
+                ulong mid = left + ((right - left) / 2);
+                ulong midSquared = mid * mid;
+                if (midSquared <= A)
+                {
+                    left = mid + 1;
+                }
+                else
+                {
+                    right = mid - 1;
+                }
+            }
+            return (ulong)left - 1;
+        }
+
+        static bool isPowerofTwo(ulong N)
+        {
+            return ((N & (N - 1)) == 0);
+        }
+
+        static string isPossible(int a, int b, int c, int d)
+        {
+            if (possible(a, b, c, d))
+            {
+                return "Yes";
+            }
+            else
+            {
+                return "No";
+            }
+        }
+
+        static bool possible(int a, int b, int c, int d)
+        {
+           
+            if(a==c && b ==d)
+            {
+                return true;
+            }
+
+            if(a>c || b > d)
+            {
+                return false;
+            }
+            //choose - explore - unchoose
+            while (!(a == c && b == d))
+            {
+                int tempa = a;
+                int tempb = b;
+                if (a < c)
+                {
+                    a = a + b;
+                }
+                else if (b < d)
+                {
+                    b = a + b;
+                }
+                return possible(a, b, c, d);
+            }
+            return false;
+        }
+
+        static void pascalTriangle(int k)
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int n = 0; n < k; n++)
+            {
+                sb = new StringBuilder();
+                for (int r = 0; r <= n; r++)
+                {
+                    sb.Append(getPascalTraingleValue(n, r).ToString() + ' ');
+                }
+                string str = sb.ToString();
+                Console.WriteLine(str.Substring(0, str.Length - 1));
+            }
+        }
+
+        static Int64 getPascalTraingleValue(int n, int r)
+        {           
+            if (n == 0 || r == 0)
+            {
+                return 1;
+            }           
+            return (factorial(n) / (factorial(r) * factorial(n - r)));
+        }
+
+        static Int64 factorial(int k)
+        {
+            if (k == 1 || k == 0)
+            {
+                return 1;
+            }
+            return k * factorial(k - 1);
         }
 
         private static void RunRecursion()
