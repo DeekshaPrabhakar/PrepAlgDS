@@ -39,10 +39,207 @@ namespace PrepAlgDS
             //RunGraphs();
             //RunDynamicProgramming();
             // Console.WriteLine(degreeOfArray(new int[] { 1, 0, 1 }));
-            RunCalibrationFive();
+            //RunCalibrationFive();
+            RunCalibrationSix();
             Console.ReadLine();
         }
 
+        static void RunCalibrationSix()
+        {
+            //fiveOne();
+            //fiveTwo();
+            //fiveThree();
+
+            int i = 0;
+            int j = 0;
+            string s = "ababac";
+
+            while (i < s.Length)
+            {
+                if (s[i] == s[j] && i != j)
+                {
+                    if (s.Substring(0, s.Length - i) == s.Substring(j, s.Length - i))
+                    {
+
+                    }
+                }
+                else
+                {
+                    j = j + 1;
+                }
+
+            }
+        }
+
+        static void fiveThree()
+        {
+            int res;
+            int n;
+            n = Convert.ToInt32(Console.ReadLine());
+            int bundleQuantities_size = 0;
+            bundleQuantities_size = Convert.ToInt32(Console.ReadLine());
+            int[] bundleQuantities = new int[bundleQuantities_size];
+            int bundleQuantities_item;
+            for (int bundleQuantities_i = 0; bundleQuantities_i < bundleQuantities_size; bundleQuantities_i++)
+            {
+                bundleQuantities_item = Convert.ToInt32(Console.ReadLine());
+                bundleQuantities[bundleQuantities_i] = bundleQuantities_item;
+            }
+
+            int bundleCosts_size = 0;
+            bundleCosts_size = Convert.ToInt32(Console.ReadLine());
+            int[] bundleCosts = new int[bundleCosts_size];
+            int bundleCosts_item;
+            for (int bundleCosts_i = 0; bundleCosts_i < bundleCosts_size; bundleCosts_i++)
+            {
+                bundleCosts_item = Convert.ToInt32(Console.ReadLine());
+                bundleCosts[bundleCosts_i] = bundleCosts_item;
+            }
+
+            res = budgetShopping(n, bundleQuantities, bundleCosts);
+        }
+
+        static int budgetShopping(int n, int[] bundleQuantities, int[] bundleCosts)
+        {
+            int books = 0;
+
+
+
+            return books;
+        }
+
+        static void fiveTwo()
+        {
+
+            int res;
+            string s;
+            s = Console.ReadLine();
+
+            int minLength;
+            minLength = Convert.ToInt32(Console.ReadLine());
+
+            int maxLength;
+            maxLength = Convert.ToInt32(Console.ReadLine());
+
+            int maxUnique;
+            maxUnique = Convert.ToInt32(Console.ReadLine());
+
+            res = getMaxOccurrences(s, minLength, maxLength, maxUnique);
+        }
+
+
+        static int getMaxOccurrences(string s, int minLength, int maxLength, int maxUnique)
+        {
+            int max = 0;
+            Dictionary<string, int> repStrCount = new Dictionary<string, int>();
+            List<char> chArray = new List<char>();
+            int i = 0;
+            int j = 0;
+
+            while (i < s.Length)
+            {
+                if (s[i] == s[j] && i != j)
+                {
+                    if(s.Substring(0,s.Length-i) == s.Substring(j,s.Length -i))
+                    {
+
+                    }
+                }
+                else
+                {
+                    j = j + 1;
+                }
+
+            }
+
+                return max;
+        }
+        
+        static void fiveOne()
+        {
+            int arr_rows = 0;
+            int arr_cols = 0;
+            arr_rows = Convert.ToInt32(Console.ReadLine());
+            arr_cols = Convert.ToInt32(Console.ReadLine());
+
+            int[][] arr = new int[arr_rows][];
+            for (int arr_i = 0; arr_i < arr_rows; arr_i++)
+            {
+                string[] arr_temp = Console.ReadLine().Split(' ');
+                arr[arr_i] = Array.ConvertAll(arr_temp, Int32.Parse);
+            }
+
+            countNumbers(arr);
+        }
+
+        static void countNumbers(int[][] arr)
+        {
+            for(int i = 0; i<arr.Length; i++)
+            {
+                int[] row = arr[i];
+                Console.WriteLine(calculateRow(row[0], row[1]));
+            }
+        }
+
+        static Int64 calculateRow(int n, int m)
+        {
+            Dictionary<int, bool> numFavDict = new Dictionary<int, bool>();
+            //bool[] numFavDict = new bool[m];
+            int count = 0;
+            for (int i = n; i <= m; i++)
+            {
+                if (!numFavDict.ContainsKey(i))
+                {
+                    numFavDict.Add(i, isNumberFavorite(i));
+                }
+
+                if (numFavDict[i])
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        static bool isNumberFavorite(int num)
+        {
+            bool isFav = true;
+            bool[] digitsDict = new bool[10];
+
+            while(num != 0)
+            {
+                if(digitsDict[num%10] == true)
+                {
+                    return false;
+                }
+                digitsDict[num % 10] = true;
+                num = num / 10;
+            }
+
+            return isFav;
+        }
+
+
+        //static bool isNumberFavorite(int num)
+        //{
+        //    bool isFav = true;
+        //    char[] numArray = num.ToString().ToCharArray();
+        //    Dictionary<char, int> digitDict = new Dictionary<char, int>();
+
+        //    foreach (char s in numArray)
+        //    {
+        //        if (digitDict.ContainsKey(s))
+        //        {
+        //            return false;
+        //        }
+        //        else
+        //        {
+        //            digitDict.Add(s, 1);
+        //        }
+        //    }
+
+        //    return isFav;
+        //}
 
         static void RunCalibrationFive()
         {
@@ -103,45 +300,40 @@ namespace PrepAlgDS
         {
             List<int> arr = new List<int>();
             Dictionary<int, List<int>> studentIDFriends = new Dictionary<int, List<int>>();
-            Student std = null;
+            
             for (int i = 1; i <= n; i++)
             {
-                std = new Student(i);
-                std.friends.Add(i);
                 studentIDFriends.Add(i, new List<int>(new int[] { i }));
             }
 
-            int grouptoadd = 0;
+           
             for (int i = 0; i < queryType.Length; i++)
             {
-                if (queryType[i] == "Friend")
+                if (queryType[i] == "Friend" && students1.Length > 0)
                 {
-                    //for(int i=0; i<students1.Length; i++)
-                    //{
-                    //    if(studentIDFriends.ContainsKey(students1[i]) && grouptoadd == 0)
-                    //    {
-                    //        grouptoadd = students1[i];
-                    //    }
-                    //    else
-                    //    {
-                    //        studentIDFriends[grouptoadd].Add(students1[i]);
-                    //        studentIDFriends.Remove()
-                    //    }
-                    //}
+                    int grouptoadd = students1[0];
+                    for (int j = 1; j < students1.Length; j++)
+                    {
+                        studentIDFriends[grouptoadd].Add(students1[j]);
+                        studentIDFriends.Remove(students1[j]);
+                    }
                 }
                 else if(queryType[i] == "Total")
                 {
                     int count = 0;
-                    //foreach (int studentID in students1)
-                    //{
-                    //    count += studentIDFriendsCount[studentID];
-                    //}
-
-                    //foreach (int studentID in students2)
-                    //{
-                    //    count += studentIDFriendsCount[studentID];
-                    //}
-                    //arr.Add(count);
+                    foreach (int studentID in students2)
+                    {
+                        foreach(List<int> friends in studentIDFriends.Values)
+                        {
+                            if(friends.Contains(studentID))
+                            {
+                                count += friends.Count;
+                                break;
+                            }
+                        }                       
+                    }
+                   
+                    arr.Add(count);
                 }
             }
             
@@ -195,7 +387,11 @@ namespace PrepAlgDS
             //Stairs.Run();
             //Decode.Run();
             //JumpGame.Run();
-            LongestParenthesesValid.Run();
+            //LongestParenthesesValid.Run();
+            //Fibonacci.Run();
+            //RepeatingSubSequence.Run();
+            //LongestIncreasingSubSequence.Run();
+            WordBreakII.Run();
         }
         static void RunGraphs()
         {
